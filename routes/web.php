@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Website;
+use App\Http\Controllers\WebsiteController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,10 +26,16 @@ Route::get('/footer', function () {
     return view('/layouts/footer');
 });
 
-Route::get('/home', [Website::class, 'main']);
+Route::get('/form', function () {
+    return view('form');
+});
 
-Route::get('/about', [Website::class, 'about']);
+Route::get('/home', [WebsiteController::class, 'main']);
 
-Route::get('/contact', [Website::class, 'contact'])->name('contact');
+Route::get('/about', [WebsiteController::class, 'about']);
 
-Route::get('/services', [Website::class, 'services']);
+Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact');
+
+Route::get('/services', [WebsiteController::class, 'services']);
+
+Route::post('/storing', [WebsiteController::class, 'store'])->name('storing');

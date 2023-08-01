@@ -36,32 +36,7 @@
                         Let’s get the dialogue going on:
                     </p>
                 </div>
-    
-    
-              <div class="contact__form">
-                <form action="" method="" class="">
-                    <div class="form__row">
-                        <div class="form__field">
-                             <input type="text" placeholder="NAME*">
-                        </div>
-                        <div class="form__field">
-                            <input type="text" placeholder="EMAIL*">
-                       </div>
-                    </div>
-                    <div class="form__row">
-                        <div class="form__field">
-                             <input type="text" placeholder="CONTACT NUMBER*">
-                        </div>
-                        <div class="form__field">
-                            <input type="text" placeholder="ADDRESS*">
-                       </div>
-                    </div>
-                    <div class="from__field">
-                        <textarea class="textareas" id="" cols="30" rows="10" placeholder="HOW CAN WE HELP?"></textarea>
-                    </div>
-                </form>
-                <button>CONTACT US</button>
-              </div>
+                @include('form')
             </div>
     
     
