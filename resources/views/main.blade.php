@@ -52,6 +52,8 @@
                 <h2>
                     Who we are.
                 </h2>
+
+                
                 <hr class="after__line">
 
                 <p>

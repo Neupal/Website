@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\ContactController;
+
+use App\Http\Controllers\DescriptionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,12 +32,14 @@ Route::get('/form', function () {
     return view('form');
 });
 
-Route::get('/home', [WebsiteController::class, 'main']);
+Route::get('/home', [ContactController::class, 'main']);
 
-Route::get('/about', [WebsiteController::class, 'about']);
+Route::get('/about', [ContactController::class, 'about']);
 
-Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact');
+Route::get('/contact', [ContactController::class, 'contact'])->name('contact');
 
-Route::get('/services', [WebsiteController::class, 'services']);
+Route::get('/services', [ContactController::class, 'services']);
 
-Route::post('/storing', [WebsiteController::class, 'store'])->name('storing');
+Route::post('/storing', [ContactController::class, 'store'])->name('storing');
+
+Route::get('/create', [DescriptionController::class, 'create']);
